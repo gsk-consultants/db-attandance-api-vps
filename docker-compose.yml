@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  api:
+    build: .
+    container_name: dbskills-attendance-api
+    ports:
+      - "8082:6001"
+    env_file:
+      - .env
+    restart: always
+    volumes:
+      - ./uploads:/app/uploads
